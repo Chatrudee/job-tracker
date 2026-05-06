@@ -42,6 +42,7 @@ export function useAuth() {
   const logout = useCallback(() => {
     localStorage.clear()
     setUser(null)
+    window.location.href = '/login'
   }, [])
 
   return { user, loading, isAuthenticated: !!user, login, register, logout }
